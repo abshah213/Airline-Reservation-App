@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flight_Type_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Flight_Type__c, &apos;Domestic&apos;),  
+    Visa_Required__c = TRUE
+   )</errorConditionFormula>
+    <errorDisplayField>Visa_Required__c</errorDisplayField>
+    <errorMessage>Visa Required Should Be Unchecked For Domestic Flight.</errorMessage>
+</ValidationRule>
